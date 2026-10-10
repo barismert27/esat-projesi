@@ -1,0 +1,224 @@
+/* Public interior pages share the clinic's editorial design. */
+.ed-site.ed-interior {
+    --interior-paper: var(--ed-paper, #f4f1eb);
+    --interior-ink: var(--ed-ink, #292d29);
+    --interior-muted: var(--ed-muted, #666960);
+    --interior-rust: var(--ed-rust, #8f4b37);
+    --interior-line: var(--ed-line, #d8d8cf);
+    background: var(--interior-paper);
+    color: var(--interior-ink);
+}
+.ed-site.ed-interior .main { padding-top: 0; }
+.ed-site.ed-interior .page { background: transparent; }
+.ed-site.ed-interior .ed-page-intro { padding: 82px 0 55px; background: transparent; text-align: start; }
+.ed-site.ed-interior .ed-page-intro .container { border-bottom: 1px solid var(--interior-line); padding-bottom: 48px; }
+.ed-site.ed-interior .badge {
+    display: block; margin: 0 0 23px; padding: 0; background: transparent;
+    border: 0; border-radius: 0; color: var(--interior-rust); box-shadow: none;
+    font: 500 11px/1.5 'DM Sans', sans-serif; letter-spacing: .16em; text-transform: uppercase;
+}
+.ed-site.ed-interior .ed-page-intro h1 {
+    max-width: 1000px; color: var(--interior-ink); margin: 0 0 24px;
+    font: 400 clamp(48px, 6vw, 88px)/1.06 'DM Serif Display', Georgia, serif;
+    letter-spacing: -.045em;
+}
+.ed-site.ed-interior .ed-page-intro p {
+    max-width: 600px; color: var(--interior-muted); margin: 0;
+    font: 400 17px/1.8 'DM Sans', sans-serif;
+}
+.ed-site.ed-interior .services { background: transparent !important; padding: 0 0 100px !important; }
+
+/* Clinic: a photograph and plain, numbered principles. */
+.ed-site.ed-interior .about-section { padding: 0 0 100px; }
+.ed-site.ed-interior .ed-about-intro { display: grid; grid-template-columns: 1.1fr 1fr; gap: 75px; align-items: center; }
+.ed-site.ed-interior .ed-about-photo { margin: 0; aspect-ratio: 1.15; overflow: hidden; }
+.ed-site.ed-interior .ed-about-photo img { width: 100%; height: 100%; object-fit: cover; }
+.ed-site.ed-interior .ed-about-copy h2 {
+    font: 400 clamp(38px, 4vw, 58px)/1.15 'DM Serif Display', Georgia, serif;
+    letter-spacing: -.025em; color: var(--interior-ink); margin: 20px 0 22px;
+}
+.ed-site.ed-interior .ed-about-copy p { font-size: 17px; line-height: 1.9; color: var(--interior-muted); margin-bottom: 32px; }
+.ed-site.ed-interior .mission-vision { grid-template-columns: 1fr 1fr; gap: 75px; margin-top: 70px; }
+.ed-site.ed-interior .mv-card {
+    border: 0; border-top: 1px solid var(--interior-line); padding: 30px 0 0;
+    border-radius: 0; box-shadow: none; background: transparent; text-align: start;
+}
+.ed-site.ed-interior .mv-card:hover { transform: none; box-shadow: none; }
+.ed-site.ed-interior .ed-principle-number { font-size: 12px; letter-spacing: .08em; color: var(--interior-rust); }
+.ed-site.ed-interior .mv-card h3 { margin: 20px 0 14px; font: 400 34px/1.25 'DM Serif Display', Georgia, serif; color: var(--interior-ink); }
+.ed-site.ed-interior .mv-card p { color: var(--interior-muted); max-width: 500px; line-height: 1.85; }
+
+/* Treatment explorer: navigation as a contents list. */
+.ed-site.ed-interior .category-tabs-container {
+    justify-content: flex-start; gap: 0; margin-bottom: 42px;
+    border-bottom: 1px solid var(--interior-line); flex-wrap: wrap;
+}
+.ed-site.ed-interior .category-tab {
+    padding: 17px 23px 17px 0; margin-inline-end: 26px; background: transparent;
+    border: 0; border-bottom: 2px solid transparent; border-radius: 0; box-shadow: none;
+    color: var(--interior-muted); font: 500 14px/1.6 'DM Sans', sans-serif;
+}
+.ed-site.ed-interior .category-tab.active { border-bottom-color: var(--interior-rust); color: var(--interior-rust); background: transparent; box-shadow: none; }
+.ed-site.ed-interior .category-tab:hover { transform: none; box-shadow: none; color: var(--interior-ink); }
+.ed-site.ed-interior .services-explorer {
+    grid-template-columns: minmax(240px, .8fr) minmax(0, 1.6fr); gap: 65px;
+    border: 0; padding: 0; border-radius: 0; box-shadow: none; background: transparent;
+}
+.ed-site.ed-interior .explorer-sidebar { gap: 0; }
+.ed-site.ed-interior .explorer-item {
+    width: 100%; min-height: 65px; justify-content: flex-start; gap: 15px; text-align: start;
+    padding: 18px 0; border: 0; border-bottom: 1px solid var(--interior-line);
+    border-radius: 0; background: transparent; color: var(--interior-muted);
+    font: 400 15px/1.65 'DM Sans', sans-serif;
+}
+.ed-site.ed-interior .ed-service-index { color: var(--interior-rust); font-size: 11px; flex: 0 0 22px; }
+.ed-site.ed-interior .explorer-item::after { margin-inline-start: auto; }
+.ed-site.ed-interior .explorer-item:hover,
+.ed-site.ed-interior .explorer-item.active { background: transparent; color: var(--interior-rust); transform: none; padding-inline-start: 0; }
+.ed-site.ed-interior .explorer-content-panel {
+    min-height: 380px; padding: 38px 40px; border: 1px solid var(--interior-line);
+    border-radius: 0; background: #eeede5;
+}
+.ed-site.ed-interior .panel-header-row { border-color: var(--interior-line); padding-bottom: 25px; align-items: flex-start; gap: 20px; }
+.ed-site.ed-interior .panel-icon-box {
+    width: auto; height: auto; min-width: 28px; border: 0; background: transparent;
+    border-radius: 0; box-shadow: none; color: var(--interior-rust); font: 400 12px/1.5 'DM Sans', sans-serif;
+}
+.ed-site.ed-interior .panel-title-area span { color: var(--interior-muted); font: 400 10px/1.5 'DM Sans', sans-serif; letter-spacing: .13em; }
+.ed-site.ed-interior .panel-title-area h3 { margin-top: 12px; color: var(--interior-ink); font: 400 38px/1.18 'DM Serif Display', Georgia, serif; }
+.ed-site.ed-interior .panel-body-desc { color: var(--interior-muted); font-size: 15px; line-height: 1.9; }
+.ed-site.ed-interior .panel-features h4 { color: var(--interior-ink); font: 500 12px/1.6 'DM Sans', sans-serif; letter-spacing: .03em; margin-bottom: 15px; }
+.ed-site.ed-interior .panel-features li { color: var(--interior-muted); font-size: 14px; }
+.ed-site.ed-interior .panel-features li i { color: var(--interior-rust); }
+.ed-site.ed-interior .panel-actions { border-color: var(--interior-line); flex-wrap: wrap; gap: 14px; }
+.ed-site.ed-interior .btn-primary-lg,
+.ed-site.ed-interior .btn-outline-lg,
+.ed-site.ed-interior .btn-primary {
+    min-height: 49px; padding: 13px 22px; border: 1px solid var(--interior-ink);
+    border-radius: 0; background: var(--interior-ink); color: var(--interior-paper);
+    box-shadow: none; font: 500 13px/1.6 'DM Sans', sans-serif;
+}
+.ed-site.ed-interior .btn-outline-lg { background: transparent; color: var(--interior-ink); border-width: 1px !important; }
+.ed-site.ed-interior .btn-primary-lg:hover,
+.ed-site.ed-interior .btn-primary:hover { transform: none; box-shadow: none; background: var(--interior-rust); border-color: var(--interior-rust); }
+.ed-site.ed-interior .btn-outline-lg:hover { transform: none; color: var(--interior-rust); border-color: var(--interior-rust); background: transparent; }
+
+/* Treatment comparisons retain the draggable before/after control. */
+.ed-site.ed-interior .ba-grid { gap: 34px; max-width: none; margin: 0; }
+.ed-site.ed-interior .ba-slider { border-radius: 0; border: 1px solid var(--interior-line); box-shadow: none; background: #eeede5; }
+.ed-site.ed-interior .ba-label { top: 14px; border: 0; border-radius: 0; padding: 6px 10px; font: 500 10px/1.5 'DM Sans', sans-serif; letter-spacing: .08em; }
+.ed-site.ed-interior .ba-label.before { left: 14px; }
+.ed-site.ed-interior .ba-label.after { right: 14px; }
+.ed-site.ed-interior .ba-handle::after { background-color: var(--interior-rust); box-shadow: none; }
+.ed-site.ed-interior .ba-slider:focus-within { outline: 2px solid var(--interior-rust); outline-offset: 5px; }
+.ed-site.ed-interior #gallery-container > div:only-child:not(.ba-slider) { border: 1px solid var(--interior-line); min-height: 240px; display: flex; align-items: center; justify-content: center; flex-direction: column; }
+
+/* Doctor's journal uses typographic cards and an uncluttered reading panel. */
+.ed-site.ed-interior .makale-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 290px), 1fr)); gap: 35px; margin: 0; }
+.ed-site.ed-interior .makale-card { border: 0; border-radius: 0; box-shadow: none; background: transparent; }
+.ed-site.ed-interior .makale-card:hover { transform: none; box-shadow: none; }
+.ed-site.ed-interior .makale-card-img { background: #e7e7dc; color: var(--interior-rust); height: 250px; }
+.ed-site.ed-interior .makale-card-body { padding: 26px 0; border-bottom: 1px solid var(--interior-line); }
+.ed-site.ed-interior .makale-card-meta { flex-wrap: wrap; margin-bottom: 16px; }
+.ed-site.ed-interior .makale-tag { padding: 0; border-radius: 0; background: transparent; color: var(--interior-rust); font-size: 10px; letter-spacing: .04em; }
+.ed-site.ed-interior .makale-card-title { font: 400 32px/1.2 'DM Serif Display', Georgia, serif; color: var(--interior-ink); }
+.ed-site.ed-interior .makale-card-excerpt { font-size: 14px; color: var(--interior-muted); }
+.ed-site.ed-interior .makale-read-more { color: var(--interior-rust); font-size: 12px; font-weight: 500; }
+.ed-site.ed-interior .makale-empty { grid-column: 1 / -1; border: 1px solid var(--interior-line); padding: 70px 25px; }
+.ed-site.ed-interior .makale-empty i { font-size: 32px; color: var(--interior-rust); opacity: .5; }
+.ed-site.ed-interior .makale-empty h3 { color: var(--interior-ink); font: 400 34px/1.2 'DM Serif Display', Georgia, serif; margin-bottom: 15px; }
+.ed-site.ed-interior .makale-modal-overlay,
+.ed-site.ed-interior .service-modal { z-index: 2000; background: rgba(41, 45, 41, .7); backdrop-filter: blur(3px); }
+.ed-site.ed-interior .makale-modal-box { background: var(--interior-paper); border-radius: 0; box-shadow: none; }
+.ed-site.ed-interior .makale-modal-title { font: 400 42px/1.2 'DM Serif Display', Georgia, serif; color: var(--interior-ink); }
+.ed-site.ed-interior .makale-modal-divider { height: 1px; background: var(--interior-line); }
+.ed-site.ed-interior .makale-modal-icerik { color: var(--interior-ink); font-size: 16px; line-height: 1.9; }
+.ed-site.ed-interior .makale-modal-close,
+.ed-site.ed-interior .service-modal-close { border: 1px solid var(--interior-line); border-radius: 0; background: var(--interior-paper); color: var(--interior-ink); font: 400 24px/1 'DM Sans', sans-serif; }
+
+/* Appointment: editorial introduction beside a practical form. */
+.ed-site.ed-interior .appointment-page { min-height: auto; display: block; padding: 80px 0 100px; background: transparent; }
+.ed-site.ed-interior .split-layout {
+    display: grid; grid-template-columns: .9fr 1.1fr; gap: 75px; max-width: 1220px;
+    width: calc(100% - 96px); margin: 0 auto; padding: 0; overflow: visible;
+    border: 0; border-radius: 0; box-shadow: none; background: transparent;
+}
+.ed-site.ed-interior .split-info { display: block; padding: 15px 0; background: transparent; text-align: start; }
+.ed-site.ed-interior .split-info h1 { font: 400 clamp(44px, 5vw, 72px)/1.08 'DM Serif Display', Georgia, serif; color: var(--interior-ink); letter-spacing: -.025em; margin: 22px 0; }
+.ed-site.ed-interior .split-info > p { color: var(--interior-muted); max-width: 380px; font-size: 16px; line-height: 1.9; }
+.ed-site.ed-interior .ed-appointment-contact { margin-top: 70px; border-top: 1px solid var(--interior-line); padding-top: 24px; display: grid; gap: 9px; color: var(--interior-muted); }
+.ed-site.ed-interior .ed-appointment-contact > span { font-size: 11px; letter-spacing: .05em; }
+.ed-site.ed-interior .ed-appointment-contact a { color: var(--interior-ink); font-size: 22px; }
+.ed-site.ed-interior .ed-appointment-contact address { font-style: normal; font-size: 13px; }
+.ed-site.ed-interior .split-form { padding: 35px; border: 1px solid var(--interior-line); background: #eeede5; }
+.ed-site.ed-interior .form-wrapper h3 { text-align: start; color: var(--interior-ink); font: 400 36px/1.2 'DM Serif Display', Georgia, serif; margin-bottom: 12px; }
+.ed-site.ed-interior .form-wrapper p.form-subtitle { text-align: start; font-size: 13px; color: var(--interior-muted); line-height: 1.8; margin-bottom: 28px; }
+.ed-site.ed-interior .form-group label { color: var(--interior-ink); font: 500 12px/1.6 'DM Sans', sans-serif; margin-bottom: 9px; }
+.ed-site.ed-interior .form-group input,
+.ed-site.ed-interior .form-group select,
+.ed-site.ed-interior .form-group textarea { background: var(--interior-paper); color: var(--interior-ink); border: 1px solid #cfcec4; border-radius: 0; padding: 14px; font: 400 14px/1.5 'DM Sans', sans-serif; box-shadow: none; }
+.ed-site.ed-interior .form-group input:focus,
+.ed-site.ed-interior .form-group select:focus,
+.ed-site.ed-interior .form-group textarea:focus { outline: 2px solid var(--interior-rust); outline-offset: 2px; box-shadow: none; border-color: var(--interior-rust); }
+.ed-site.ed-interior .form-group:has(#isKvkkAccepted) { display: flex; align-items: flex-start !important; margin-bottom: 25px; }
+.ed-site.ed-interior #isKvkkAccepted { flex: 0 0 17px; width: 17px !important; height: 17px; margin-top: 3px; accent-color: var(--interior-rust); }
+.ed-site.ed-interior .form-group:has(#isKvkkAccepted) label { font-size: 11px !important; line-height: 1.9; }
+.ed-site.ed-interior #randevu-form > button { width: 100%; }
+.ed-site.ed-interior .service-modal { display: none; position: fixed; inset: 0; align-items: center; justify-content: center; padding: 24px; }
+.ed-site.ed-interior .service-modal.active { display: flex; }
+.ed-site.ed-interior .service-modal-content { position: relative; width: 100%; max-width: 640px; max-height: calc(100dvh - 48px); overflow-y: auto; padding: 55px 35px 35px; background: var(--interior-paper); }
+.ed-site.ed-interior .service-modal-close { position: absolute; inset-block-start: 15px; inset-inline-end: 15px; width: 36px; height: 36px; }
+.ed-site.ed-interior .service-modal-body h3 { color: var(--interior-ink); font: 400 34px/1.2 'DM Serif Display', Georgia, serif; margin-bottom: 24px; }
+.ed-site.ed-interior .service-modal-body p { color: var(--interior-muted); font-size: 14px; line-height: 1.9; margin-bottom: 15px; }
+
+@media (max-width: 1000px) {
+    .ed-site.ed-interior .ed-about-intro,
+    .ed-site.ed-interior .mission-vision { gap: 38px; }
+    .ed-site.ed-interior .services-explorer { gap: 30px; grid-template-columns: minmax(210px, .8fr) minmax(0, 1.4fr); }
+    .ed-site.ed-interior .explorer-content-panel { padding: 30px; }
+    .ed-site.ed-interior .split-layout { gap: 40px; width: calc(100% - 64px); }
+    .ed-site.ed-interior .split-form { padding: 28px; }
+}
+@media (max-width: 700px) {
+    .ed-site.ed-interior .form-group input,
+    .ed-site.ed-interior .form-group select,
+    .ed-site.ed-interior .form-group textarea { font-size: 16px; }
+    .ed-site.ed-interior .ed-page-intro { padding: 48px 0 35px; }
+    .ed-site.ed-interior .ed-page-intro .container { padding-bottom: 30px; }
+    .ed-site.ed-interior .ed-page-intro h1 { font-size: 48px; overflow-wrap: anywhere; }
+    .ed-site.ed-interior .ed-page-intro p { font-size: 15px; }
+    .ed-site.ed-interior .services,
+    .ed-site.ed-interior .about-section { padding-bottom: 65px !important; }
+    .ed-site.ed-interior .ed-about-intro,
+    .ed-site.ed-interior .mission-vision,
+    .ed-site.ed-interior .services-explorer,
+    .ed-site.ed-interior .split-layout { grid-template-columns: 1fr; }
+    .ed-site.ed-interior .ed-about-intro { gap: 30px; }
+    .ed-site.ed-interior .ed-about-photo { aspect-ratio: 1.2; }
+    .ed-site.ed-interior .ed-about-copy h2 { font-size: 40px; }
+    .ed-site.ed-interior .ed-about-copy p { font-size: 15px; }
+    .ed-site.ed-interior .mission-vision { margin-top: 45px; gap: 32px; }
+    .ed-site.ed-interior .mv-card h3 { font-size: 30px; }
+    .ed-site.ed-interior .category-tabs-container { margin-bottom: 28px; gap: 0 16px; }
+    .ed-site.ed-interior .category-tab { margin: 0; padding: 12px 0; flex: 1 1 40%; font-size: 12px; }
+    .ed-site.ed-interior .explorer-content-panel { padding: 26px 22px; min-height: 0; }
+    .ed-site.ed-interior .panel-title-area h3 { font-size: 32px; }
+    .ed-site.ed-interior .panel-title-area span { font-size: 9px; }
+    .ed-site.ed-interior .panel-actions { flex-direction: column; align-items: stretch; }
+    .ed-site.ed-interior .panel-actions a { text-align: center; }
+    .ed-site.ed-interior .ba-grid { grid-template-columns: 1fr; gap: 24px; }
+    .ed-site.ed-interior .makale-grid { grid-template-columns: 1fr; }
+    .ed-site.ed-interior .makale-card-img { height: 240px; }
+    .ed-site.ed-interior .makale-modal-title { font-size: 34px; }
+    .ed-site.ed-interior .makale-modal-icerik { font-size: 15px; }
+    .ed-site.ed-interior .appointment-page { padding: 45px 0 65px; }
+    .ed-site.ed-interior .split-layout { width: calc(100% - 40px); gap: 35px; }
+    .ed-site.ed-interior .split-info { padding: 0; }
+    .ed-site.ed-interior .split-info h1 { font-size: 52px; }
+    .ed-site.ed-interior .ed-appointment-contact { margin-top: 30px; }
+    .ed-site.ed-interior .split-form { padding: 27px 20px; }
+    .ed-site.ed-interior .form-wrapper h3 { font-size: 30px; }
+    .ed-site.ed-interior .form-row { flex-direction: column; gap: 0; }
+    .ed-site.ed-interior .service-modal-content { padding: 55px 25px 25px; }
+    .ed-site.ed-interior .service-modal-body h3 { font-size: 29px; }
+}

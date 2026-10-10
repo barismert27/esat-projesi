@@ -4,33 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hemen Randevu Al | Esat Kılınç Diş Kliniği</title>
-    <meta name="description" content="Diş hekimliği kontrolleriniz ve tedavileriniz için ücretsiz muayene, röntgen ve tedavi planlama randevunuzu online sistemimiz üzerinden anında oluşturun.">
+    <title>Randevu Talebi | Esat Kılınç Diş Kliniği</title>
+    <meta name="description" content="Esat Kılınç Diş Kliniği’nde muayene ve tedavi sürecinizi planlamak için iletişim bilgilerinizi, tercih ettiğiniz günü ve saati paylaşın.">
     <link rel="canonical" href="https://www.esatkilinc.com/randevu.html">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.esatkilinc.com/randevu.html">
-    <meta property="og:title" content="Hemen Randevu Al | Esat Kılınç Diş Kliniği">
-    <meta property="og:description" content="Online randevu formunu doldurarak size en uygun saatte diş hekimi randevunuzu oluşturun.">
+    <meta property="og:title" content="Randevu Talebi | Esat Kılınç Diş Kliniği">
+    <meta property="og:description" content="Muayene ve tedavi sürecinizi birlikte planlamak için randevu talebinizi iletin.">
     <meta property="og:image" content="https://www.esatkilinc.com/video/logo-yeni.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.esatkilinc.com/randevu.html">
-    <meta property="twitter:title" content="Hemen Randevu Al | Esat Kılınç Diş Kliniği">
-    <meta property="twitter:description" content="Online randevu formunu doldurarak size en uygun saatte diş hekimi randevunuzu oluşturun.">
+    <meta property="twitter:title" content="Randevu Talebi | Esat Kılınç Diş Kliniği">
+    <meta property="twitter:description" content="Muayene ve tedavi sürecinizi birlikte planlamak için randevu talebinizi iletin.">
     <meta property="twitter:image" content="https://www.esatkilinc.com/video/logo-yeni.png">
 
-    <!-- Google Fonts: Poppins (Display) & Inter (Body) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700;800&display=swap"
-        rel="stylesheet">
-
     <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="vendor/fontawesome/css/all.min.css">
     <link rel="icon" href="video/logo-yeni.png">
     <link rel="icon" href="video/logo-yeni.png">
     <link rel="apple-touch-icon" href="video/logo-yeni.png">
@@ -42,101 +35,54 @@
       "@context": "https://schema.org",
       "@type": "ContactPage",
       "name": "Randevu Sayfası",
-      "description": "Esat Kılınç Diş Kliniği Diş Kliniği için online randevu talep formu.",
+      "description": "Esat Kılınç Diş Kliniği için online randevu talep formu.",
       "url": "https://www.esatkilinc.com/randevu.html"
     }
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="vendor/sweetalert2.all.min.js"></script>
+    <link rel="stylesheet" href="editorial.css?v=1">
+    <link rel="stylesheet" href="editorial-interior.css?v=1">
 </head>
 
-<body>
+<body class="ed-site ed-interior ed-appointment">
 
-    <!-- HEADER -->
-    <header class="header">
+    <a class="ed-skip" href="#main-content" data-i18n="ed-skip">İçeriğe geç</a>
+    <div class="ed-topline"><div class="container"><span>GAZİANTEP / ŞAHİNBEY</span><a href="tel:+905366539795">0536 653 97 95 <span aria-hidden="true">↗</span></a></div></div>
+    <header class="header ed-header">
         <div class="container header-content">
-            <div class="logo-container">
-                <img src="video/logo-yeni.png" alt="Logo" class="logo-img">
-                <h1 class="logo">Esat Kılınç Diş Kliniği<span>.</span></h1>
-            </div>
-            <nav class="nav">
-                <a href="index.html" class="nav-btn" data-i18n="nav-home">Ana Sayfa</a>
-                <a href="hakkimizda.html" class="nav-btn" data-i18n="nav-about">Hakkımızda</a>
-                <a href="hizmetler.html" class="nav-btn" data-i18n="nav-services">Hizmetler</a>
+            <a href="index.html" class="ed-brand" aria-label="Esat Kılınç Diş Kliniği — Ana sayfa"><span class="ed-monogram" aria-hidden="true">ek.</span><span class="ed-brand-name">Esat Kılınç<span data-i18n="ed-brand-sub">AĞIZ VE DİŞ SAĞLIĞI</span></span></a>
+            <nav class="nav" aria-label="Ana menü">
+                <a href="hakkimizda.html" class="nav-btn" data-i18n="ed-nav-clinic">Klinik</a>
+                <a href="hizmetler.html" class="nav-btn" data-i18n="ed-nav-treatments">Tedaviler</a>
                 <a href="galeri.html" class="nav-btn" data-i18n="nav-gallery">Galeri</a>
-                <a href="makaleler.html" class="nav-btn" data-i18n="nav-articles">Doktor Köşesi</a>
+                <a href="makaleler.html" class="nav-btn" data-i18n="ed-nav-journal">Doktor Köşesi</a>
                 <a href="#contact" class="nav-btn" data-i18n="nav-contact">İletişim</a>
             </nav>
             <div class="header-right">
-
                 <div class="lang-selector">
-                    <button class="lang-btn" id="lang-menu-btn">
-                        <i class="fa-solid fa-globe"></i> <span id="current-lang">TR</span> <i class="fa-solid fa-chevron-down"></i>
-                    </button>
-                    <div class="lang-dropdown" id="lang-dropdown">
-                        <a href="#" onclick="changeLanguage('tr'); return false;">Türkçe</a>
-                        <a href="#" onclick="changeLanguage('en'); return false;">English</a>
-                        <a href="#" onclick="changeLanguage('ar'); return false;">???????</a>
-                        <a href="#" onclick="changeLanguage('de'); return false;">Deutsch</a>
-                    </div>
+                    <button class="lang-btn" id="lang-menu-btn" type="button" aria-label="Dil seçimi" aria-expanded="false" aria-controls="lang-dropdown"><span id="current-lang">TR</span><span aria-hidden="true">⌄</span></button>
+                    <div class="lang-dropdown" id="lang-dropdown"><a href="#" data-lang="tr" onclick="changeLanguage('tr'); return false;">Türkçe</a><a href="#" data-lang="en" onclick="changeLanguage('en'); return false;">English</a><a href="#" data-lang="ar" onclick="changeLanguage('ar'); return false;">العربية</a><a href="#" data-lang="de" onclick="changeLanguage('de'); return false;">Deutsch</a></div>
                 </div>
-                <a href="tel:05366539795" class="header-phone"><i class="fa-solid fa-phone"></i>0536 653 97 95</a>
-                <a href="randevu.html" class="btn-cta" data-i18n="btn-cta">Hemen Randevu Al</a>
+                <a href="randevu.html" class="ed-button ed-header-cta active" aria-current="page"><span data-i18n="ed-appointment">Randevu alın</span><span aria-hidden="true">↗</span></a>
             </div>
-            <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Menü">
-                <i class="fa-solid fa-bars"></i>
-            </button>
+            <button class="mobile-menu-btn" id="mobile-menu-btn" type="button" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobile-drawer"><span></span><span></span></button>
         </div>
     </header>
-
-    <!-- MOBILE MENU DRAWER & OVERLAY -->
     <div class="mobile-overlay" id="mobile-overlay"></div>
-    <div class="mobile-drawer" id="mobile-drawer">
-        <div class="drawer-header">
-            <div class="logo-container">
-                <img src="video/logo-yeni.png" alt="Logo" class="logo-img">
-                <span class="logo">Esat Kılınç Diş Kliniği<span>.</span></span>
-            </div>
-            <button class="drawer-close-btn" id="drawer-close-btn" aria-label="Kapat">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
-        </div>
-        <div class="drawer-body">
-            <nav class="drawer-nav">
-                <a href="index.html" class="drawer-nav-btn" data-i18n-nav="home"><i class="fa-solid fa-house"></i> <span data-i18n="nav-home">Ana Sayfa</span></a>
-                <a href="hakkimizda.html" class="drawer-nav-btn" data-i18n-nav="about"><i class="fa-solid fa-circle-info"></i> <span data-i18n="nav-about">Hakkımızda</span></a>
-                <a href="hizmetler.html" class="drawer-nav-btn" data-i18n-nav="services"><i class="fa-solid fa-tooth"></i> <span data-i18n="nav-services">Hizmetler</span></a>
-                <a href="galeri.html" class="drawer-nav-btn" data-i18n-nav="gallery"><i class="fa-solid fa-image"></i> <span data-i18n="nav-gallery">Galeri</span></a>
-                <a href="makaleler.html" class="drawer-nav-btn" data-i18n-nav="articles"><i class="fa-solid fa-newspaper"></i> <span data-i18n="nav-articles">Doktor Köşesi</span></a>
-                <a href="#contact" class="drawer-nav-btn" data-i18n-nav="contact"><i class="fa-solid fa-location-dot"></i> <span data-i18n="nav-contact">İletişim</span></a>
-            </nav>
-            
-            <div class="drawer-lang-section">
-                <div class="lang-title"><i class="fa-solid fa-globe"></i> Dil / Language</div>
-                <div class="drawer-lang-links">
-                    <a href="#" data-lang="tr" onclick="changeLanguage('tr'); return false;">Türkçe</a>
-                    <a href="#" data-lang="en" onclick="changeLanguage('en'); return false;">English</a>
-                    <a href="#" data-lang="ar" onclick="changeLanguage('ar'); return false;">???????</a>
-                    <a href="#" data-lang="de" onclick="changeLanguage('de'); return false;">Deutsch</a>
-                </div>
-            </div>
-        </div>
-        <div class="drawer-footer">
-            <a href="tel:05366539795" class="drawer-phone"><i class="fa-solid fa-phone"></i> 0536 653 97 95</a>
-            <a href="randevu.html" class="drawer-btn-cta" data-i18n="btn-cta">Hemen Randevu Al</a>
-        </div>
+    <div class="mobile-drawer" id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menü" tabindex="-1" inert>
+        <div class="drawer-header"><span class="ed-brand-name">Esat Kılınç<span data-i18n="ed-brand-sub">AĞIZ VE DİŞ SAĞLIĞI</span></span><button class="drawer-close-btn" id="drawer-close-btn" type="button" aria-label="Menüyü kapat">×</button></div>
+        <div class="drawer-body"><nav class="drawer-nav" aria-label="Mobil menü"><a href="index.html" class="drawer-nav-btn" data-i18n="nav-home">Ana Sayfa</a><a href="hakkimizda.html" class="drawer-nav-btn" data-i18n="ed-nav-clinic">Klinik</a><a href="hizmetler.html" class="drawer-nav-btn" data-i18n="ed-nav-treatments">Tedaviler</a><a href="galeri.html" class="drawer-nav-btn" data-i18n="nav-gallery">Galeri</a><a href="makaleler.html" class="drawer-nav-btn" data-i18n="ed-nav-journal">Doktor Köşesi</a><a href="#contact" class="drawer-nav-btn" data-i18n="nav-contact">İletişim</a></nav><div class="drawer-lang-links"><a href="#" data-lang="tr" onclick="changeLanguage('tr'); return false;">TR</a><a href="#" data-lang="en" onclick="changeLanguage('en'); return false;">EN</a><a href="#" data-lang="ar" onclick="changeLanguage('ar'); return false;">AR</a><a href="#" data-lang="de" onclick="changeLanguage('de'); return false;">DE</a></div></div>
+        <div class="drawer-footer"><a href="randevu.html" class="ed-button active" aria-current="page"><span data-i18n="ed-appointment">Randevu alın</span><span aria-hidden="true">↗</span></a><a href="tel:+905366539795">0536 653 97 95</a></div>
     </div>
 
-    <main class="main">
+    <main class="main" id="main-content">
         <div class="page active appointment-page">
             <div class="split-layout">
                 <div class="split-info">
-                    <h2 data-i18n="app-header-title">Randevu Zamanı</h2>
-                    <p data-i18n="app-header-desc">Siz kahvenizi yudumlarken biz işlemlerinizi planlayalım.</p>
-                    <ul class="info-list">
-                        <li>? Ücretsiz İlk Muayene</li>
-                        <li>? Panoramik Röntgen</li>
-                        <li>? Tedavi Planlaması</li>
-                    </ul>
+                    <span class="ed-eyebrow" data-i18n="ed-appointment">Randevu alın</span>
+                    <h1 data-i18n="app-header-title">Birlikte planlayalım.</h1>
+                    <p data-i18n="app-header-desc">Uygun gününüzü seçin. Muayene ve tedavi sürecinizi birlikte planlayalım.</p>
+                    <div class="ed-appointment-contact"><span data-i18n="ed-get-in-touch">İletişimde kalalım</span><a href="tel:+905366539795">0536 653 97 95</a><address>Şahinbey / Gaziantep</address></div>
                 </div>
                 <div class="split-form">
                     <div class="form-wrapper">
@@ -144,28 +90,28 @@
                         <p class="form-subtitle" data-i18n="app-form-subtitle">Formu doldurarak size en uygun saate randevu oluşturabilirsiniz.</p>
                         <form id="randevu-form">
                             <div class="form-group">
-                                <label data-i18n="app-form-name">Ad Soyad</label>
-                                <input type="text" id="ad" name="ad" required placeholder="İsim Soyisim" data-i18n-placeholder="app-form-name">
+                                <label for="ad" data-i18n="app-form-name">Ad Soyad</label>
+                                <input type="text" id="ad" name="ad" autocomplete="name" required placeholder="İsim Soyisim" data-i18n-placeholder="app-form-name">
                             </div>
 
                             <div class="form-group">
-                                <label data-i18n="app-form-phone">Telefon</label>
-                                <input type="tel" id="telefon" name="telefon" required placeholder="0555 555 55 55" data-i18n-placeholder="app-form-phone">
+                                <label for="telefon" data-i18n="app-form-phone">Telefon</label>
+                                <input type="tel" id="telefon" name="telefon" autocomplete="tel-national" inputmode="tel" required placeholder="0555 555 55 55" data-i18n-placeholder="app-form-phone">
                             </div>
 
                             <div class="form-group">
-                                <label data-i18n="app-form-email">E-posta</label>
-                                <input type="email" id="email" name="email" required placeholder="mail@ornek.com" data-i18n-placeholder="app-form-email">
+                                <label for="email" data-i18n="app-form-email">E-posta</label>
+                                <input type="email" id="email" name="email" autocomplete="email" required placeholder="mail@ornek.com" data-i18n-placeholder="app-form-email">
                             </div>
 
                             <div class="form-row">
                                 <div class="form-group">
-                                    <label data-i18n="app-form-date">Tarih</label>
+                                    <label for="tarih" data-i18n="app-form-date">Tarih</label>
                                     <input type="date" id="tarih" name="tarih" required>
                                 </div>
 
                                 <div class="form-group">
-                                    <label data-i18n="app-form-time">Saat</label>
+                                    <label for="saat" data-i18n="app-form-time">Saat</label>
                                     <select id="saat" name="saat" required>
                                         <option value="" data-i18n="app-form-select">Seçiniz</option>
                                     </select>
@@ -173,13 +119,13 @@
                             </div>
 
                             <div class="form-group">
-                                <label data-i18n="app-form-notes">Notlar</label>
+                                <label for="notlar" data-i18n="app-form-notes">Notlar</label>
                                 <textarea id="notlar" name="notlar" rows="3" data-i18n-placeholder="app-form-notes"></textarea>
                             </div>
 
                             <div class="form-group" style="flex-direction: row; align-items: center; gap: 10px; margin-top: 15px;">
                                 <input type="checkbox" id="isKvkkAccepted" name="isKvkkAccepted" required style="width: auto;">
-                                <label for="isKvkkAccepted" style="font-size: 14px; margin-bottom: 0;"><a href="#" class="open-kvkk-modal" style="color: var(--primary); text-decoration: underline;">KVKK Aydınlatma Metni ve Gizlilik Politikası</a>'nı okudum, kişisel verilerimin işlenmesini kabul ediyorum.</label>
+                                <label for="isKvkkAccepted" style="font-size: 14px; margin-bottom: 0;"><a href="#" class="open-kvkk-modal" style="color: var(--primary); text-decoration: underline;" data-i18n="ed-kvkk-title">KVKK Aydınlatma Metni ve Gizlilik Politikası</a>. <span data-i18n="ed-kvkk-consent">Okudum; kişisel verilerimin işlenmesini kabul ediyorum.</span></label>
                             </div>
 
                             <button type="submit" class="btn-primary" data-i18n="btn-app-submit">Randevuyu Onayla</button>
@@ -190,76 +136,37 @@
         </div>
     </main>
 
-    <footer class="footer" id="contact">
-        <div class="container footer-content">
-            <div class="footer-col">
-                <h3>Esat Kılınç Diş Kliniği.</h3>
-                <p style="opacity: 0.7; color: #cbd5e1;">Modern diş hekimliğinin güvenilir adresi.</p>
-                <div class="footer-social">
-                    <a href="https://www.instagram.com/dt.esatkilic/" target="_blank" class="social-icon"><i
-                            class="fa-brands fa-instagram"></i></a>
-                </div>
+    <footer class="ed-footer" id="contact">
+        <div class="container">
+            <div class="ed-footer-intro"><div><span class="ed-eyebrow" data-i18n="ed-contact-label">BİRLİKTE BAŞLAYALIM</span><h2 data-i18n="ed-contact-title">Bir merhaba,<br>iyi bir başlangıç.</h2></div><a href="randevu.html" class="ed-circle-link" aria-label="Randevu alın"><span aria-hidden="true">↗</span></a></div>
+            <div class="ed-footer-grid">
+                <div><a href="index.html" class="ed-brand-name">Esat Kılınç<span data-i18n="ed-brand-sub">AĞIZ VE DİŞ SAĞLIĞI</span></a><p data-i18n="ed-footer-note">Gülüşünüze ve sağlığınıza<br>özenle yaklaşan diş hekimliği.</p><a href="https://www.instagram.com/dt.esatkilic/" target="_blank" rel="noopener noreferrer" class="ed-footer-social">Instagram ↗</a></div>
+                <div><h3 data-i18n="ed-find-us">Bizi ziyaret edin</h3><address>60. Yıl Mahallesi<br>Yavuz Sultan Selim Caddesi No: 121/B<br>Şahinbey / Gaziantep</address><a href="https://www.google.com/maps/search/?api=1&amp;query=60.Y%C4%B1l+Mahallesi+Yavuz+Sultan+Selim+Caddesi+121%2FB+%C5%9Eahinbey+Gaziantep" target="_blank" rel="noopener noreferrer" class="ed-text-link"><span data-i18n="ed-directions">Yol tarifi alın</span><span aria-hidden="true">↗</span></a></div>
+                <div><h3 data-i18n="ed-hours">Çalışma saatleri</h3><p><span data-i18n="ed-weekdays">Hafta içi</span><br>09.30 — 23.00</p><p><span data-i18n="ed-saturday">Cumartesi</span><br>10.00 — 18.00</p></div>
+                <div><h3 data-i18n="ed-get-in-touch">İletişimde kalalım</h3><a href="tel:+905366539795" class="ed-footer-phone">0536 653 97 95</a><a href="https://wa.me/905366539795" target="_blank" rel="noopener noreferrer" class="ed-text-link"><span data-i18n="ed-whatsapp">WhatsApp’tan yazın</span><span aria-hidden="true">↗</span></a><a href="randevu.html" class="ed-text-link"><span data-i18n="ed-appointment">Randevu alın</span><span aria-hidden="true">↗</span></a></div>
             </div>
-            <div class="footer-col">
-                <h4 data-i18n="footer-quick">Hızlı Bağlantılar</h4>
-                <ul>
-                    <li><a href="index.html" data-i18n="nav-home">Ana Sayfa</a></li>
-                    <li><a href="hakkimizda.html" data-i18n="nav-about">Hakkımızda</a></li>
-                    <li><a href="hizmetler.html" data-i18n="nav-services">Hizmetler</a></li>
-                    <li><a href="galeri.html" data-i18n="nav-gallery">Galeri</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4 data-i18n="footer-contact">İletişim</h4>
-                <ul>
-                    <li><i class="fa-solid fa-phone"></i> +90 536 653 97 95</li>
-                    <li><i class="fa-solid fa-location-dot"></i> <a href="https://www.google.com/maps/search/?api=1&query=60.y%C4%B1l+mahallesi+yavuz+sultan+selim+caddesi+No%3A121%2Fb" target="_blank" class="footer-address-link">60.yıl mahallesi yavuz sultan selim caddesi No:121/b</a></li>
-                    <li><i class="fa-solid fa-clock"></i> Hafta içi: 09:30 - 23:00<br>Cumartesi: 10:00 - 18:00</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4 data-i18n="footer-map">Konumumuz</h4>
-                <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3184.8772093077717!2d37.3323049!3d37.0375996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1531e138a4d4b1a7%3A0xeb3f33abf461dfbf!2s60.+Y%C4%B1l%2C+Yavuz+Sultan+Selim+Cd.+No%3A107%2C+27100+Gaziantep!5e0!3m2!1str!2str!4v1700000000000!5m2!1str!2str" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2025 Esat Kılınç Diş Kliniği Diş Kliniği. <span data-i18n="footer-copyright">Tüm hakları saklıdır.</span></p>
+            <div class="ed-footer-bottom"><span>© <span data-current-year>2026</span> Esat Kılınç Diş Kliniği</span><span data-i18n="ed-footer-location">Gaziantep’te, gülüşünüzün yanında.</span><a href="/login" data-i18n="ed-staff-login">Personel girişi ↗</a></div>
         </div>
     </footer>
 
-    <!-- Fixed Floating Phone Button -->
-    <a href="tel:05366539795" class="phone-float-btn" title="Hemen Arayın">
-        <i class="fa-solid fa-phone"></i>
-    </a>
-
-    
-    <!-- Fixed Floating Location Button -->
-    <a href="https://maps.google.com/?q=Esat+K%C4%B1l%C4%B1n%C3%A7+Di%C5%9F+Klini%C4%9Fi+%C4%B0stanbul" target="_blank" class="location-float-btn" title="Konumumuzu Gu00f6ru00fcn">
-        <i class="fa-solid fa-location-dot"></i>
-    </a>
-    <!-- Fixed WhatsApp Button -->
-    <a href="https://wa.me/905366539795" target="_blank" class="whatsapp-btn" title="WhatsApp ile İletişime Geçin">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
-
     <!-- KVKK Modal -->
-    <div class="service-modal" id="kvkk-modal">
+    <div class="service-modal" id="kvkk-modal" role="dialog" aria-modal="true" aria-labelledby="kvkk-title">
         <div class="service-modal-content">
-            <button class="service-modal-close" id="close-kvkk-modal"><i class="fa-solid fa-xmark"></i></button>
+            <button class="service-modal-close" id="close-kvkk-modal" type="button" aria-label="Kapat">×</button>
             <div class="service-modal-body">
-                <h3>KVKK Aydınlatma Metni ve Gizlilik Politikası</h3>
-                <p>Kişisel verileriniz, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında kliniğimiz tarafından işlenmektedir. Amacımız, size daha iyi sağlık hizmeti sunmak ve randevu süreçlerini yönetmektir.</p>
-                <p>Verileriniz, yalnızca yasal zorunluluklar çerçevesinde ve sağlık hizmeti sunumu amacıyla kullanılacak olup, üçüncü şahıslarla paylaşılmayacaktır.</p>
-                <p>Detaylı bilgi için kliniğimizle iletişime geçebilirsiniz.</p>
+                <h3 id="kvkk-title" data-i18n="ed-kvkk-title">KVKK Aydınlatma Metni ve Gizlilik Politikası</h3>
+                <p data-i18n="ed-kvkk-p1">Kişisel verileriniz, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) kapsamında kliniğimiz tarafından işlenmektedir. Amacımız, size daha iyi sağlık hizmeti sunmak ve randevu süreçlerini yönetmektir.</p>
+                <p data-i18n="ed-kvkk-p2">Verileriniz, yalnızca yasal zorunluluklar çerçevesinde ve sağlık hizmeti sunumu amacıyla kullanılacak olup, üçüncü şahıslarla paylaşılmayacaktır.</p>
+                <p data-i18n="ed-kvkk-p3">Detaylı bilgi için kliniğimizle iletişime geçebilirsiniz.</p>
             </div>
         </div>
     </div>
 
     <script src="translations.js"></script>
+    <script src="editorial-translations.js?v=1"></script>
     <script src="theme-lang.js"></script>
     <script src="script.js?v=3.0"></script>
+    <script src="editorial.js?v=1"></script>
 </body>
 
 </html>

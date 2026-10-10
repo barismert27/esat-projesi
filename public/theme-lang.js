@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Load initial theme from localStorage
     const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark') {
+    if (savedTheme === 'dark' && !bodyElement.classList.contains('ed-site')) {
         bodyElement.classList.add('dark-mode');
         updateThemeToggleIcon(true);
     } else {
@@ -48,11 +48,21 @@ document.addEventListener('DOMContentLoaded', () => {
         langMenuBtn.addEventListener('click', (e) => {
             e.stopPropagation();
             langDropdown.classList.toggle('show');
+            langMenuBtn.setAttribute('aria-expanded', String(langDropdown.classList.contains('show')));
         });
 
         // Close dropdown when clicking outside
         document.addEventListener('click', () => {
             langDropdown.classList.remove('show');
+            langMenuBtn.setAttribute('aria-expanded', 'false');
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && langDropdown.classList.contains('show')) {
+                langDropdown.classList.remove('show');
+                langMenuBtn.setAttribute('aria-expanded', 'false');
+                langMenuBtn.focus();
+            }
         });
     }
 
@@ -67,10 +77,12 @@ document.addEventListener('DOMContentLoaded', () => {
         setLanguage(lang);
         if (langDropdown) {
             langDropdown.classList.remove('show');
+            langMenuBtn.setAttribute('aria-expanded', 'false');
         }
     };
 
     function setLanguage(lang) {
+        document.documentElement.setAttribute('lang', lang);
         if (currentLangText) {
             currentLangText.textContent = lang.toUpperCase();
         }
@@ -112,5 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
             document.documentElement.removeAttribute('dir');
             document.body.style.textAlign = 'left';
         }
+        document.dispatchEvent(new CustomEvent('languagechange', { detail: { lang } }));
     }
 });
